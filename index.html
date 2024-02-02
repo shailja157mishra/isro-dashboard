@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background-color:azure;
+        }
+        
+        
+        .sidebar a{
+            padding: 10px 20px;
+            display: block;
+            text-decoration:none;
+            color:green;
+            font-size: 24px;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            transition:background-color 0.3s;
+            border-radius: 5px;
+
+        }
+        .sidebar a:hover {
+            background-color:rgb(184, 219, 25);
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+        .content {
+            margin-left:200px;
+            padding: 20px;
+        }
+
+        .navbar-black {
+            position:sticky;
+            background-color: navy;
+            padding: 70px 50px;
+            width: 100%;
+            display:flex;
+            top: 0;
+            left: 0;
+            
+            z-index: 1000; /* Ensures the navbar stays on top */
+        }
+        .logo{
+            position:fixed;
+            width: 1900px;
+            height:600 px;
+            top:0;
+
+        }
+        
+        .navbar-heading{
+            color:white;
+            font-size:26px;
+            font-weight:bold;
+            margin:0px;
+            margin-left: 700px;
+            align-items:center;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .navbar {
+  overflow: hidden;
+  background-color:orange;
+}
+.navbar a {
+  float: right;
+  font-size: 20px;
+  color: purple;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  margin-right:50px;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 20px;  
+  border: none;
+  outline: chartreuse;
+  color: black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color:chartreuse;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.sidebar {
+            position:fixed;
+            margin-top:196px;
+            top:0;
+            left:0;
+            height: 100%;
+            width:155px;
+            background-color:black;
+            transition: background-color 0.3s, box-sahdow 0.3s;
+            z-index:999;
+            padding-top:10px;
+        }
+        .globe container{
+            text-align: center;
+            margin-top: 2px;
+            margin-bottom: 20px;
+        
+        }
+        iframe {
+            width: 100%;
+            height:300px;
+            border:none;
+        }
+        .container {
+            display:flex;
+            justify-content:center;
+            flex-wrap: wrap;
+            padding:20px;
+            margin-top:20px;
+            padding-top: 10px;
+            margin-left:200px;
+        }
+    
+
+        .box{
+            width:300px;
+            height:300px;
+            background-color:rgb(144, 142, 145);
+            border-radius: 5px;
+            margin:10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: box-shadow 0.3s;
+            box-sizing: border-box;
+            position:relative;
+            overflow: hidden;
+        }
+        .box:hover{
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        .box-content {
+            padding:20px;
+        }
+        .box-buttons {
+            position: absolute;
+            top:10px;
+            right:10px;
+            display: none;
+        }
+        .box:hover .box-buttons {
+            display:block;
+        }
+        @media screen and (max-width: 500px) {
+            .container{
+                margin-left:0; 
+            }
+        }
+        .box-button {
+            cursor: pointer;
+            padding:5px;
+            background-color:whitesmoke;
+            color:midnightblue;
+            border-radius: 3px;
+            transition: background-color 0.3s;
+            margin-left:5px;
+        }
+        .box-button:hover {
+            background-color:teal;
+        }
+    </style>
+</head>
+<body>
+
+    <div class = "sidebar">
+        <a href="#">link 1</a>
+        <a href="#">link 2</a>
+        <a href="#">link 3</a>
+    </div>
+
+<nav class="navbar-black">
+    <img src="isrobannerLarge.png.webp" alt="logo" class="logo">    
+    
+</nav>
+
+<div class="navbar">
+    <a href="#settings">Settings</a>
+    <a href="#home">News</a>
+    <a href="#news">Home</a>
+    <div class="dropdown">
+      <button class="dropbtn">Dropdown 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
+    </div> 
+  </div>
+  
+<div class="globe-container">
+    <iframe src="https://giphy.com/embed/2zowfWNIqpOkO6Oa9n" width="380" height="150" frameBorder="0" class="giphy-embed" allowFullScreen></><p><a href="https://giphy.com/gifs/EuropeanSpaceAgency-animation-space-2zowfWNIqpOkO6Oa9n">via GIPHY</a></p>"your-globe.gif alt="moving globe"></iframe>
+</div>
+<div class="container">
+    <!-- First row of boxes -->
+    <!-- Box 1 -->
+    <div class="box">
+        <div class="box-buttons">
+            <button class="box-button" onclick="toggleSize(this)">Maximize</button>
+            <button class="box-button" onclick="toggleSize(this)">Minimize</button>
+        </div>
+        <div class="box-content">
+            Box 1 Content
+        </div>
+    </div>
+
+    <!-- Box 2 -->
+    <div class="box">
+        <div class="box-buttons">
+            <button class="box-button" onclick="toggleSize(this)">Maximize</button>
+            <button class="box-button" onclick="toggleSize(this)">Minimize</button>
+        </div>
+        <div class="box-content">
+            Box 2 Content
+        </div>
+    </div>
+
+    <!-- Box 3 -->
+    <div class="box">
+        <div class="box-buttons">
+            <button class="box-button" onclick="toggleSize(this)">Maximize</button>
+            <button class="box-button" onclick="toggleSize(this)">Minimize</button>
+        </div>
+        <div class="box-content">
+            Box 3 Content
+        </div>
+    </div>
+
+    <!-- Box 4 -->
+    <div class="box">
+        <div class="box-buttons">
+            <button class="box-button" onclick="toggleSize(this)">Maximize</button>
+            <button class="box-button" onclick="toggleSize(this)">Minimize</button>
+        </div>
+        <div class="box-content">
+            Box 4 Content
+        </div>
+    </div>
+
+    <!-- Second row of boxes -->
+    <!-- Box 5 -->
+    <div class="box">
+        <div class="box-buttons">
+            <button class="box-button" onclick="toggleSize(this)">Maximize</button>
+            <button class="box-button" onclick="toggleSize(this)">Minimize</button>
+        </div>
+        <div class="box-content">
+            Box 5 Content
+        </div>
+    </div>
+
+    <!-- Box 6 -->
+    <div class="box">
+        <div class="box-buttons">
+            <button class="box-button" onclick="toggleSize(this)">Maximize</button>
+            <button class="box-button" onclick="toggleSize(this)">Minimize</button>
+        </div>
+        <div class="box-content">
+            Box 6 Content
+        </div>
+
+<!-- Add content below the navbars to prevent them from overlapping -->
+<div style="height: 1000px; padding-top: 120px;">Content goes here</div>
+
+</body>
+</html>
